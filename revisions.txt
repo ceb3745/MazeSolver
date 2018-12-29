@@ -1,0 +1,31 @@
+commit 01322028ff4e721fcc45bb0e88173a203656ec57
+Author: Carson Elizabeth Bloomingdale <ceb3745@cs.rit.edu>
+Date:   Thu Mar 29 13:12:28 2018 -0400
+
+    Added comments to describe functions and actions inside of the main
+    function. Added in the freeing of anything that was previously malloced
+
+commit 2c6f1d5b5b3536daf715d2ef216e1ead1505d141
+Author: Carson Elizabeth Bloomingdale <ceb3745@cs.rit.edu>
+Date:   Thu Mar 29 13:01:57 2018 -0400
+
+    Had to redo my entire find path function to instead of use a million
+    queues use two parrallel arrays. One boolean array that contains
+    whether that node has been visited and one integer array that increases
+    value as it goes through the path. I fixed getopt to work with a file
+    pointer and ended up having nasty function parameters because
+    of the no global variable rule.
+
+commit d6d04ffa2292885507f288ec4de3635ddb2dfd7c
+Author: Carson Elizabeth Bloomingdale <ceb3745@cs.rit.edu>
+Date:   Tue Mar 27 21:29:18 2018 -0400
+
+    Currently have gone in and out of hell with this code. I got the
+    solution to work if it was a 2 by 2 array, as soon as there was a larger array, I ran into problems. I didn't know we had to take non square arrays so now I
+    have to go back into the program and reconfigure everything to work for any
+    dimensions n by m of matrix. I added in the getopt for the different functionalities. I also added in the change of how the input it taken in based on the
+    flag. I created the functions findNeighbors, findNode, and findPlace all to
+    aid me in the execution. I need to implement the pretty print and the sort of
+    best path outside of findPlace so that I can add the optional arguement. Currently the final possible path is only working with the finalPath being a global
+    variable. When I try to return it from the function and reassign it, it doesn't
+    work and actually just reassigns the values to NULL.
